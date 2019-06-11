@@ -7,7 +7,11 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Vuex from 'vuex'
 
+import axios from 'axios'
 
+//axios.defaults.withCredentials=true   //全局请求头,这是比较常用的携带cookie
+// axios.defaults.headers['X-Requested-With'] = 'XMLHttpRequest' //另一个例子
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -18,3 +22,4 @@ new Vue({
   template: '<App/>'
 })
 Vue.use(ElementUI)
+Vue.use(Vuex)
